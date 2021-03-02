@@ -190,12 +190,14 @@ def dictionary():
         speak("I couldn't quite get that, could you repeat the word?")
         dictionary()
 
+# Code below this line is incomplete
+
 def findphone():
     """
     Find location of user's phone using iCloud
 
     """
-    return 1
+    return None
 
 def weather():
     """
@@ -203,28 +205,26 @@ def weather():
 
     """
 
-    return 1
+    return None
 
 def news():
     """
     Provides the user with trending headlines.
 
     """
-    return 1
+    return None
 
 def recaudio():
     """
     Records audio until user manually stops the recording.
 
     """
-
-    return 1
+    return None
 
 def recvideo():
     """
     Records screen until user manually stops the recording.
 
     """
-
-    return 1
+    return None
     
