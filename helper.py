@@ -16,9 +16,7 @@ def speak(audio):
     Enables the virtual assistant to speak based on the required input.
 
     audio: text to be spoken
-
     """
-
     print("Karen: {}".format(audio))
     engine.say(audio)
     engine.runAndWait()
@@ -29,9 +27,7 @@ def GreetMe(name):
     their name.
 
     name: name of the user
-
     """
-
     hour = int(datetime.datetime.now().hour)
 
     if hour >= 0 and hour < 12:
@@ -50,9 +46,7 @@ def MyCommand():
     """
     Listens to the voice of the user to determine the command that the virtual 
     assistant must respond and the task it should accomplish.
-
     """
-
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening.")
@@ -73,9 +67,7 @@ def MyCommand():
 def sendemail():
     """
     Virtual assistant sends an email to a specified recipent.
-
     """
-
     speak("Who should I send it to?")
     recipient = MyCommand().lower()
 
@@ -95,9 +87,7 @@ def sendemail():
 def playsong():
     """
     Virtual assistant plays a specified song from apple music.
-
     """
-
     speak("What song would you like me to play?")
     song = MyCommand()
 
@@ -114,9 +104,7 @@ def playsong():
 def screenshot():
     """
     Virtual assistant takes a screenshot and then saves it.
-
     """
-
     sc = pyautogui.screenshot()
     sc.save('my_screenshot.png')
     speak("Screenshot saved.")
@@ -126,9 +114,7 @@ def google(command):
     Open a tab based on the specified google search term.
 
     command: command specified by the user
-
     """
-
     term = command.replace('google', '').strip()
     url = "https://www.google.com/search?q={}".format(term)
     return url
@@ -138,9 +124,7 @@ def youtube(command):
     Open a tab based on the specified youtube search term.
 
     command: command specified by the user
-
     """
-
     term = command.replace('youtube', '').strip()
     url = "https://www.youtube.com/results?q={}".format(term)
     return url
@@ -148,9 +132,7 @@ def youtube(command):
 def reminder():
     """
     Saves a reminder to a text file.
-
     """
-
     speak("What would you like me to remind you?")
     reminder = MyCommand()
 
@@ -167,7 +149,6 @@ def secs2hours(secs):
     Converts time in seconds to hours, minutes, and seconds
 
     secs: time in seconds
-
     """
     mm, ss = divmod(secs, 60)
     hh, mm = divmod(mm, 60)
@@ -176,9 +157,7 @@ def secs2hours(secs):
 def dictionary():
     """
     Gets the meaning of a word specific by the user.
-
     """
-
     speak("What word would you like to know the meaning of?")
     word = MyCommand().lower()
 
@@ -195,14 +174,12 @@ def dictionary():
 def findphone():
     """
     Find location of user's phone using iCloud
-
     """
     return None
 
 def weather():
     """
     Provides information about the weather in a specified city.
-
     """
 
     return None
@@ -210,21 +187,18 @@ def weather():
 def news():
     """
     Provides the user with trending headlines.
-
     """
     return None
 
 def recaudio():
     """
     Records audio until user manually stops the recording.
-
     """
     return None
 
 def recvideo():
     """
     Records screen until user manually stops the recording.
-
     """
     return None
     
