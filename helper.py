@@ -181,7 +181,6 @@ def weather():
     """
     Provides information about the weather in a specified city.
     """
-
     return None
 
 def news():
